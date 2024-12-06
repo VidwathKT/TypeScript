@@ -85,13 +85,13 @@ interface Vehicle {
     drive(): void;
 }
 
-class Car2 extends Vehicle {
+class Car2 implements Vehicle {
     drive(): void {
         console.log("Driving a car.");
     }
 }
 
-class Bike2 extends Vehicle {
+class Bike2 implements Vehicle {
     drive(): void {
         console.log("Riding a bike.");
     }
@@ -133,7 +133,7 @@ dog.sound();
 cat.sound();
 
 console.log("\n--- Interface Polymorphism ---");
-const myCar2: Vehicle = new Car2("Ferrari",250);
-const myBike2: Vehicle = new Bike2("Kawasaki",150);
+const myCar2: Vehicle = new Car2();
+const myBike2: Vehicle = new Bike2();
 operate(myCar2);
 operate(myBike2);
